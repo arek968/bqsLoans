@@ -8,6 +8,6 @@ namespace bQsLoanBusinessClasses
 {
     public interface IPaybackPlan
     {
-        TInstallment[] CalculatePaybackPlan(TLoanParameters LoanParameters, decimal Amount, int PaybackTime);
+        TInstallment[] CalculatePaybackPlan(TLoanParameters LoanParameters, decimal Amount, int PaybackYears);
     }
 }

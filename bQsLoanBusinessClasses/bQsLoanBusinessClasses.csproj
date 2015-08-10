@@ -42,8 +42,8 @@
   <ItemGroup>
     <Compile Include="LoanCar.cs" />
     <Compile Include="LoanSpending.cs" />
-    <Compile Include="MonthlyPaybackFixedInstallments.cs" />
-    <Compile Include="MonthlyPaybackVariableInstallments.cs" />
+    <Compile Include="PaybackFixedInstallments.cs" />
+    <Compile Include="PaybackVariableInstallments.cs" />
     <Compile Include="LoanHousing.cs" />
     <Compile Include="LoanBase.cs" />
     <Compile Include="TInstallment.cs" />

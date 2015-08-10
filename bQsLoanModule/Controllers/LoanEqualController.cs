@@ -21,13 +21,13 @@ namespace bQsLoanModule
             {
                 case "Housing":
                     LoanBase lb = new LoanHousing(PaybackTime, Amount);
-                    return lb.CalculatePaybackPlan(new MonthlyPaybackEqualInstallments());
+                    return lb.CalculatePaybackPlan(new PaybackEqualInstallments());
                 case "Car":
                     LoanBase lc = new LoanCar(PaybackTime, Amount);
-                    return lc.CalculatePaybackPlan(new MonthlyPaybackEqualInstallments());
+                    return lc.CalculatePaybackPlan(new PaybackEqualInstallments());
                 case "Spending":
                     LoanBase ls = new LoanSpending(PaybackTime, Amount);
-                    return ls.CalculatePaybackPlan(new MonthlyPaybackEqualInstallments());
+                    return ls.CalculatePaybackPlan(new PaybackEqualInstallments());
                 default: return new TInstallment[0];
             }
         }

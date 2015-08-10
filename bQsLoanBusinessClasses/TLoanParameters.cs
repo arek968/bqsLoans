@@ -10,10 +10,11 @@ namespace bQsLoanBusinessClasses
     {
 
         private decimal vInterestRate = 0;
-        private int vMinTime = 3;
-        private int vMaxTime = 480;
+        private int vMinTime = 1;
+        private int vMaxTime = 40;
         private decimal vMinAmount = 1000;
         private decimal vMaxAmount = 1000000;
+        private int vNrOfPaymentsPerYear = 12;
 
         public int MinTime
         {
@@ -44,6 +45,12 @@ namespace bQsLoanBusinessClasses
             get { return vInterestRate; }
 
             set { vInterestRate = value; }
+        }
+        public int NrOfPaymentsPerYear
+        {
+            get { return vNrOfPaymentsPerYear; }
+
+            set { vNrOfPaymentsPerYear = value; }
         }
     }
 }

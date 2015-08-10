@@ -2,20 +2,21 @@
     <h1>Housing loan</h1>
     <p>Decreasing installments </p>
     <div class="row margin-top-5">
-        <div class="col-md-12">
+        <div class="container">
 
 
             <form data-bind="submit: $root.GetInstallments" >
-                <div class="input-group ">
-                    <span class="label label-info">Payback time</span> 
-                    <input id="PaybackTime" type="text" class="form-control" placeholder="Payback time"  data-bind="event: {change:$root.removeInstallments}" />
+                
+                <div class="input-group col-md-6">
+                    <span class="label label-warning">Amount</span> 
+                    <input id="Amount" type="text" class="form-control" placeholder="1000-1000000" data-bind="event: {change:$root.removeInstallments}" />
                 </div>
-                <div class="input-group ">
-                    <span class="label label-info">Amount</span> 
-                    <input id="Amount" type="text" class="form-control" placeholder="Amount" data-bind="event: {change:$root.removeInstallments}" />
+                <div class="input-group col-md-6">
+                    <span class="label label-warning">Payback time</span>
+                    <input id="PaybackTime" type="text" class="form-control" placeholder="3-480" data-bind="event: {change:$root.removeInstallments}" />
                 </div>
-                <div id="btnSubmit" class="well-sm">
-                    <button class="btn btn-lg btn-success " type="submit" >Calculate payback plan</button>
+                <div class="well-sm">
+                    <button id="btnSubmit" class="btn btn-lg btn-success " type="submit" >Calculate payback plan</button>
                 </div>
               </form>
         </div>

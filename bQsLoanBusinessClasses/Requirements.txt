@@ -1,0 +1,20 @@
+﻿Requirements
+1)	Create a simple application which can be used for calculation of the cost from a housing loan. 
+
+2)	The user can specify the desired amount and the payback time in years. 
+The user can enter valid data and calculate the payback plan.
+
+3)	The interest should be connected to the loan type in such a manner that different loan types can have different interests. 
+The interest is connected to loan type by providing it in the constructor of a class. Every loan type can have different interest rate, min and max payback time and borrowed amount. It can be easily extended to other loan parameters
+
+4)	When selecting amount and payback time, the application should generate a monthly payback plan based on the series loan principle, i.e. you pay back an equal amount each month and add the generated interest. The interest is calculated every month.
+There are two payback plans implemented for housing loan – one with equal and one with decreasing installments. Both assume monthly payback. 
+
+5)	 The application should be made in such a manner that it can easily be extended to calculate a payment plan for other types of loans, for instance car loan, spending loan etc. with different interests. I
+
+Also bear in mind that it should be easy to extend the application to cover other payback schemes as well. 
+It can be extended to quarterly payback scheme. A payback scheme is implemented in class that inherits  from declared interface and implements properly method. Actual method that calculates payback scheme is called with a particular payback scheme as parameter.
+
+6)	 The solution should include a desktop or a web application (or both). 
+The solutions uses RESful API and Bootstrap. It can be run form desktops (web) and mobiles. Data between server and client can be transferred either using JSON or XML. Other clients (XAML) can easily access server services.
+

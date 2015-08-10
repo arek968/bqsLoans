@@ -1,0 +1,50 @@
+﻿<div class="jumbotron">
+    <h1>Housing loan</h1>
+    <p>Equal installments </p>
+    <div class="row margin-top-5">
+        <div class="col-md-12">
+
+
+            <form data-bind="submit: $root.GetInstallments">
+                <div class="input-group ">
+                    <span class="label label-info">Payback time</span>
+                    <input id="PaybackTime" type="text" class="form-control" placeholder="Payback time" data-bind="event: {change:$root.removeInstallments}" />
+                </div>
+                <div class="input-group ">
+                    <span class="label label-info">Amount</span>
+                    <input id="Amount" type="text" class="form-control" placeholder="Amount" data-bind="event: {change:$root.removeInstallments}" />
+                </div>
+                <div class="well-sm">
+                    <button id="btnSubmit" class="btn btn-lg btn-success " type="submit">Calculate payback plan</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Payback plan</div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Capital</th>
+                        <th>Interest</th>
+                        <th>Payment</th>
+                    </tr>
+                </thead>
+                <tbody id="tbInstalments" data-bind="foreach: Installments">
+                    <tr>
+                        <td data-bind="text: Month"></td>
+                        <td data-bind="text: Capital"></td>
+                        <td data-bind="text: Interest"></td>
+                        <td data-bind="text: Payment">   </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/app/LoanEqual.js"> </script>
